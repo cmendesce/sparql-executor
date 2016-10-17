@@ -1,6 +1,7 @@
 'use strict'
 
 const fs = require('fs')
+const SparqlClient = require('sparql-client')
 
 class Query {
   
@@ -25,6 +26,11 @@ class Query {
 
   sparql () {
     return this.lines.slice(2, this.lines.length).join(" ")
+  }
+
+  prepare () {
+    const client = new SparqlClient(this.endpoint())
+    return client.query(this.sparql())
   }
 }
 
