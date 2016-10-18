@@ -6,7 +6,7 @@ const SparqlClient = require('sparql-client')
 class Query {
   
   constructor(path) {
-    this.lines = fs.readFileSync('./queries/movie_actor.sparql').toString().split('\n')
+    this.lines = fs.readFileSync(path).toString().split('\n')
     
     if (!this.lines[0].startsWith('#name')) {
       throw Error('No #name variable found') 
