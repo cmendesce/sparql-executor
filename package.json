@@ -4,11 +4,15 @@
   "description": "A simple sparql query runner",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/jasmine-node/bin/jasmine-node --verbose specs"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "sparql-client": "^0.2.0"
+  },
+  "devDependencies": {
+    "jasmine": "^2.5.2",
+    "jasmine-node": "^1.14.5"
   }
 }
