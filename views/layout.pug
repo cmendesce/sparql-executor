@@ -1,0 +1,51 @@
+doctype html
+html
+  head
+    title Sparql Runner
+    link(rel='stylesheet', href='https://unpkg.com/purecss@0.6.1/build/pure-min.css', integrity="sha384-", crossorigin="anonymous")
+    link(rel="stylesheet" href="/stylesheets/style.css")
+    link(rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css")
+    <!--[if lte IE 8]>
+        link(rel="stylesheet" href="https://unpkg.com/purecss@0.6.1/build/grids-responsive-old-ie-min.css")
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+        link(rel="stylesheet" href="https://unpkg.com/purecss@0.6.1/build/grids-responsive-min.css")
+    <!--<![endif]-->
+    <!--[if lte IE 8]>
+        link(rel="stylesheet" href="/stylesheets/style-old-ie.css")
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+        link(rel="stylesheet" href="/stylesheets/style.css")
+    <!--<![endif]-->
+  body
+
+    div(class='pure-menu pure-menu-horizontal')
+      a(href="/", class="pure-menu-heading") Sparql Runner
+      ul(class="pure-menu-list")
+        li(class="pure-menu-item")
+          a(href="/", class="pure-menu-link") Home
+        li(class="pure-menu-item")
+          a(href="/", class="pure-menu-link") Queries
+        li(class="pure-menu-item")
+          a(href="/runner", class="pure-menu-link") Runner
+      
+    a(target='_blank', href='https://github.com/cmendesce/sparql-runner.git')
+      img(style='position: absolute; top: 0; right: 0; border: 0;', src='https://camo.githubusercontent.com/52760788cde945287fbb584134c4cbc2bc36f904/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f77686974655f6666666666662e706e67', alt='Fork me on GitHub', data-canonical-src='https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png')
+        
+    div(class='l-content')
+      div(class='information')
+        h3(class='information-head') Introduction
+        p This is an assingment of the course Semantics Web Services of the 
+          a(href='http://www.unifor.br/index.php?option=com_content&view=article&id=481&Itemid=879', target='_blank') Post-Graduate Program in Applied Informatics (PPGIA)
+          |  at 
+          a(href='http://www.unifor.br/', target='_blank') University of Fortaleza (UNIFOR) in Brazil.
+          
+        p This is a simple application that executes sparql queries in a given endpoint. Some queries can be found below and the 
+          | entire code can be found 
+          a(href='https://github.com/cmendesce/sparql-executor', target='_blank') here
+          | .
+        
+        block content
+  
+  script(src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js")
+  block scripts

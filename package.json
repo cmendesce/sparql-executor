@@ -1,18 +1,25 @@
 {
-  "name": "sparql-runner",
-  "version": "1.0.0",
-  "description": "A simple sparql query runner",
-  "main": "index.js",
+  "name": "sparql-executor",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "test": "./node_modules/jasmine-node/bin/jasmine-node --verbose specs"
+    "start": "node ./bin/www",
+    "test": "istanbul cover jasmine spec/*-spec.js"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
+    "body-parser": "~1.15.2",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.2.0",
+    "express": "~4.14.0",
+    "morgan": "~1.7.0",
+    "pug": "~2.0.0-beta6",
+    "serve-favicon": "~2.3.0",
     "sparql-client": "^0.2.0"
   },
   "devDependencies": {
-    "jasmine": "^2.5.2",
+    "eslint": "^3.11.1",
+    "istanbul": "^0.4.5",
+    "jasmine": "^2.5.0",
     "jasmine-node": "^1.14.5"
   }
 }

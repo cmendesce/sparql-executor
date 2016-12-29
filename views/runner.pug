@@ -1,0 +1,26 @@
+extends layout
+
+block content
+  h3(class='information-head') Runner
+  form(class="pure-form pure-form-stacked", action="runner", method="POST")
+    fieldset
+      label(for="endpoint") Endpoint
+      input(class="pure-input-2-3", name="endpoint" id="endpoint" type="text" placeholder="Endpoint", required, value=endpoint)
+
+      label(for="query") Query
+      textarea(class="pure-input-1", rows="14", name="query" id="query" placeholder="Query", required) #{query}
+
+      button(class="pure-button") Run Query
+
+  if result
+      .query-result
+        table(class="pure-table pure-table-bordered")
+          thead
+            tr
+              each item in result.head.vars
+                th #{item}
+          tbody
+            each obj in result.results.bindings
+              tr
+                each prop in result.head.vars
+                  td #{obj[prop].value}
